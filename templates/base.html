@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title_name %}My Site{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'app.css' %}">
+  {% block css_files %}{% endblock %}
+</head>
+<body>
+  <header id="main-navigation" class="nav-container">
+    <h1><a href="{% url 'starting-page' %}">HARSH'S Blog</a></h1>
+  
+    <nav class="nav-links">
+      <a href="{% url 'read-later' %}">Stored Posts</a>
+      <a href="{% url 'all-posts' %}">All Posts</a>
+    </nav>
+  </header>
+  
+
+    {% block content %}
+    <p>This is the default content.</p>
+    {% endblock %}
+    
+</body>
+</html>
