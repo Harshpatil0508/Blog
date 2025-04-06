@@ -29,7 +29,7 @@ DEBUG = False
 # DEBUG = getenv("IS_DEVELOPMENT", True)
 
 # ALLOWED_HOSTS = [*]
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', os.environ.get('RENDER_EXTERNAL_HOSTNAME')]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
